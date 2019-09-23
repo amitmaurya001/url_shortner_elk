@@ -11,12 +11,9 @@ Docker version 18.09.7
 docker-compose version 1.24.1,
 java "1.8.0_222"
 maven 
+ELK
  
 ## Step
-
-##############Create network in Docker##############
-**************Run the command**************
-docker network create springapp
 
 ##############Start ELK on Docker##############
 Browse to ELK folder 
@@ -28,6 +25,8 @@ docker-compose -f docker-compose-ELK.yml up
 Install filebeat 
 
 **************Run the command to install FileBeat**************
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.3.2-amd64.deb
+sudo dpkg -i filebeat-7.3.2-amd64.deb
 apt-get install apt-transport-https
 apt update
 apt install filebeat
