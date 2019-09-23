@@ -16,7 +16,7 @@ ELK
 ## Step
 
 ##############Start ELK on Docker##############
-Browse to ELK folder 
+Download the project from git
 **************Run the command**************
 
 sysctl -w vm.max_map_count=262144 (NOTE*************)
