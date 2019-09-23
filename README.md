@@ -16,7 +16,7 @@ ELK
 ## Step
 
 ##############Start ELK on Docker##############
-Download the project from git
+Download the project from git , browse to folder /ELK_final_delivery.
 **************Run the command**************
 
 sysctl -w vm.max_map_count=262144 (NOTE*************)
@@ -33,7 +33,7 @@ apt update
 apt install filebeat
 
 **************Copy FileBeat configurations**************
-Browse to FileBeat folder
+Browse to /FileBeat_Linux_Delivery folder
 Copy filebeat.yml to /etc/filebeat 
 
 **************Start FileBeat Service**************
