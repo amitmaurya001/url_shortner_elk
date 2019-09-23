@@ -45,3 +45,6 @@ Click on Index Patterns
 Click on Create index
 Define Index Pattern as filebeat*
 In the next page, click on @timestamp
+
+## License
+[Rsystem](https://www.rsystems.com/)
