@@ -1,20 +1,47 @@
-Url Shortener
+# Url Shortener
+
 Link shortening service will convert long url in shortcode and redirect to actual url using short code url.
 
-Installation
-#Prerequisite:- Linux Ubuntu 16.04 Docker version 18.09.7 docker-compose version 1.24.1, java "1.8.0_222" maven
+## Installation
 
-Step
-##############Create network in Docker############## Run the command docker network create springapp
 
-##############Start ELK on Docker############## Browse to ELK folder Run the command sysctl -w vm.max_map_count=262144 (NOTE*************) docker-compose -f docker-compose-ELK.yml up
+#Prerequisite:-
+Linux Ubuntu 16.04
+Docker version 18.09.7
+docker-compose version 1.24.1,
+java "1.8.0_222"
+maven 
+ 
+## Step
 
-##############Start FileBeat on Host Machine(LINUX)############## Install filebeat
+##############Create network in Docker##############
+**************Run the command**************
+docker network create springapp
 
-Run the command to install FileBeat apt-get install apt-transport-https apt update apt install filebeat
+##############Start ELK on Docker##############
+Browse to ELK folder 
+**************Run the command**************
+sysctl -w vm.max_map_count=262144 (NOTE*************)
+docker-compose -f docker-compose-ELK.yml up
 
-Copy FileBeat configurations Browse to FileBeat folder Copy filebeat.yml to /etc/filebeat
+##############Start FileBeat on Host Machine(LINUX)##############
+Install filebeat 
 
-Start FileBeat Service filebeat -e -c /etc/filebeat/filebeat.yml
+**************Run the command to install FileBeat**************
+apt-get install apt-transport-https
+apt update
+apt install filebeat
 
-##############Create Index in Kibana############## Open link http://hostmachineip:5601 in a browser. Click on Index Patterns Click on Create index Define Index Pattern as filebeat* In the next page, click on @timestamp
+**************Copy FileBeat configurations**************
+Browse to FileBeat folder
+Copy filebeat.yml to /etc/filebeat 
+
+**************Start FileBeat Service**************
+filebeat -e -c /etc/filebeat/filebeat.yml
+
+##############Create Index in Kibana##############
+Open link http://hostmachineip:5601 in a browser.
+Click on Index Patterns
+Click on Create index
+Define Index Pattern as filebeat*
+In the next page, click on @timestamp
