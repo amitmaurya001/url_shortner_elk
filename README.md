@@ -20,7 +20,7 @@ Browse to ELK folder
 **************Run the command**************
 
 sysctl -w vm.max_map_count=262144 (NOTE*************)
-docker-compose -f docker-compose-ELK.yml up
+docker-compose -f docker-compose-ELK.yml up -d
 
 ##############Start FileBeat on Host Machine(LINUX)##############
 Install filebeat 
